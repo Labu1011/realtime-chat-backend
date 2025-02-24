@@ -4,17 +4,17 @@ const userSchema = new mongoose.Schema(
   {
     email: {
       type: String,
-      required: true,
+      required: [true, "Email is required."],
       unique: true,
     },
     fullName: {
       type: String,
-      required: true,
+      required: [true, "Fullname is required."],
     },
     password: {
       type: String,
-      required: true,
-      minLength: 6,
+      required: [true, "Password is a required field."],
+      minLength: [6, "Password must be at least 6 characters."],
     },
     profilePic: {
       type: String,

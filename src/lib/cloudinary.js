@@ -1,6 +1,8 @@
 import { v2 as cloudinary } from "cloudinary";
 
-// let's see what happens if I don't import and config from dotenv.
+import { config } from "dotenv";
+
+config();
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
